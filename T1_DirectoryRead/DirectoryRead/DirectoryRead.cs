@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,9 @@ namespace DirectoryRead
         static void OutputFileDetails(string name) {
             // ACTIVITY 7 - FILL IN CODE HERE
             Console.WriteLine(name);
+            StreamReader sr = new StreamReader(name);
+            String content = sr.ReadToEnd();
+            Console.WriteLine("Word Count: " + content.Split().Length);
         }
 
         static void WalkDirectoryTree(String path)
