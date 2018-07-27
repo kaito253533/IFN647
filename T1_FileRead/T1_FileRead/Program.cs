@@ -13,7 +13,7 @@ namespace T1_FileRead
         {
             StreamReader sr = new StreamReader("./TextFiles/Activity5/AlicePara.txt");
             String textString = sr.ReadToEnd();
-            Console.Write(textString);
+            Console.Write(textString.ToUpper());
 
             string[] result = textString.Split();
             Console.Write("The number of words is " + result.Length);
