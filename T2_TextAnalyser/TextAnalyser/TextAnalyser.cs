@@ -92,8 +92,9 @@ namespace TextAnalyser
 
 
             TextAnalyser textAnalyser = new TextAnalyser();
-
-            System.Console.WriteLine("Activity 3");
+            
+            textAnalyser.OutputStems("Stagnation Appendix Orientation Agreement Start Punctual Marvel Evolve Cast Angle");
+            /*System.Console.WriteLine("Activity 3");
             string text1 = "Tokenising, even in english, is a difficult problem. It's even harder in other languages - such as Chinese!";
             textAnalyser.OutputTokens(text1);
 
@@ -114,7 +115,7 @@ namespace TextAnalyser
             Console.WriteLine();
             System.Console.WriteLine("Activity 6");
 
-            textAnalyser.ProcessText("./AlicePara.txt");
+            textAnalyser.ProcessText("./AlicePara.txt");*/
 
             System.Console.ReadLine();
 
