@@ -93,7 +93,7 @@ namespace TextAnalyser
 
             TextAnalyser textAnalyser = new TextAnalyser();
             
-            textAnalyser.OutputStems("Stagnation Appendix Orientation Agreement Start Punctual Marvel Evolve Cast Angle");
+            textAnalyser.OutputStems("I love information retrieval. I love data science. Data Scientist is a dream job.");
             /*System.Console.WriteLine("Activity 3");
             string text1 = "Tokenising, even in english, is a difficult problem. It's even harder in other languages - such as Chinese!";
             textAnalyser.OutputTokens(text1);
