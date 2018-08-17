@@ -335,7 +335,9 @@ namespace PorterStemmerAlgorithm
 					setto("ble");
 				else if (ends("iz"))
 					setto("ize");
-				else if (doublec(k)) 
+                else if (ends("is"))
+                    setto("ise");
+                else if (doublec(k)) 
 				{
 					k--;
 					int ch = b[k];
@@ -410,14 +412,16 @@ namespace PorterStemmerAlgorithm
 					if (ends("icate")) { r("ic"); break; }
 					if (ends("ative")) { r(""); break; }
 					if (ends("alize")) { r("al"); break; }
-					break;
+                    if (ends("alise")) { r("al"); break; }
+                    if (ends("ilise")) { r("il"); break; }
+                    break;
 				case 'i':
 					if (ends("iciti")) { r("ic"); break; }
-					break;
+                    break;
 				case 'l':
 					if (ends("ical")) { r("ic"); break; }
 					if (ends("ful")) { r(""); break; }
-					break;
+                    break;
 				case 's':
 					if (ends("ness")) { r(""); break; }
 					break;
@@ -500,15 +504,15 @@ namespace PorterStemmerAlgorithm
 			if (k > 1) 
 			{
 				step1();
-                //WriteCurrentReduction();
+                WriteCurrentReduction();
                 step2();
-                //WriteCurrentReduction();
+                WriteCurrentReduction();
  				step3();
-                //WriteCurrentReduction();
+                WriteCurrentReduction();
  				step4();
-                //WriteCurrentReduction();
+                WriteCurrentReduction();
 				step5();
-                //WriteCurrentReduction();
+                WriteCurrentReduction();
  			}
 			i_end = k+1;
 			i = 0;
