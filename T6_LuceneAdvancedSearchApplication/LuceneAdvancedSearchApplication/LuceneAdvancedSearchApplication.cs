@@ -143,7 +143,7 @@ namespace LuceneAdvancedSearchApplication
                 myLuceneApp.IndexText(s);
                 docID++;
             }
-            System.Console.WriteLine("All documents added.");
+            System.Console.WriteLine("All documents added.!!!!");
             myLuceneApp.CleanUpIndexer();
 
             // Searching Code
