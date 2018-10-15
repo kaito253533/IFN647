@@ -52,6 +52,8 @@ namespace LuceneApplication
             Lucene.Net.Documents.Field field = new Field(TEXT_FN, text, Field.Store.YES, Field.Index.ANALYZED, Field.TermVector.WITH_POSITIONS_OFFSETS);
             Lucene.Net.Documents.Document doc = new Document();
             doc.Add(field);
+            Lucene.Net.Documents.Field field2 = new Field("aaa", text, Field.Store.YES, Field.Index.ANALYZED, Field.TermVector.WITH_POSITIONS_OFFSETS);
+            doc.Add(field2);
             writer.AddDocument(doc);
         }
 
@@ -71,7 +73,9 @@ namespace LuceneApplication
         }
 
         public void CreateParser() {
-            parser = new Lucene.Net.QueryParsers.QueryParser(VERSION, TEXT_FN, analyzer);
+            string[] fields = new[] { TEXT_FN, "aaa" };
+            // parser = new Lucene.Net.QueryParsers.QueryParser(VERSION, TEXT_FN, analyzer);
+            parser = new Lucene.Net.QueryParsers.MultiFieldQueryParser(VERSION, fields, analyzer);
         }
 
         public void CleanUpSearcher() {
